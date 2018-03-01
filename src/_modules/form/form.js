@@ -99,7 +99,7 @@ export default class Form {
 					if (response.statusText === 'OK') {
 						this._showMessage({
 							type: 'success',
-							text: 'Thank You. Your message was send.'
+							text: 'Thank You. Your message was sent successfully.'
 						});
 					} else {
 						this._showMessage({
