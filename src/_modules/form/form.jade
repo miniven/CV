@@ -1,0 +1,14 @@
+form.form(action="/")
+	.form__row
+		.form__field
+			input.form__input(type="text" name="name")
+			label.form__label Name
+	.form__row
+		.form__field
+			input.form__input(type="text" name="email")
+			label.form__label Email
+	.form__row
+		.form__field
+			textarea.form__input.form__input--tall(name="message")
+			label.form__label Message
+	button.button.button--white(type="submit") Contact Me

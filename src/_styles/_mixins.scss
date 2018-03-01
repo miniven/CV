@@ -1,0 +1,26 @@
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+
+	@media (min-width: $media-md) {
+		width: 95%;
+	}
+
+	@media (min-width: $media-xl) {
+		width: 90%;
+	}
+}

@@ -1,0 +1,15 @@
+.footer {
+	padding: 30px 0;
+	font-size: 1em;
+	background-color: darken($color-contast, 3%);
+
+	&__container {
+		@include container;
+	}
+
+	&__text {
+		font-size: 1em;
+		text-align: center;
+		color: transparentize(#fff, 0.85);
+	}
+}

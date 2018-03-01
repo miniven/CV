@@ -1,0 +1,10 @@
+.title {
+	font-size: 1.3rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: $color-contast;
+
+	@media (min-width: $media-md) {
+		font-size: 3.5rem;
+	}
+}

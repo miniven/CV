@@ -1,0 +1,121 @@
+extends _layouts/base
+
+block content
+
+	///////////
+	// About //
+	///////////
+
+	section.section.section--dark.section--about#about
+		.section__container
+			h2.subtitle About Me
+			.section__textzone
+				p.section__text I'm a 23 years old result-orientired Front-End Developer. I constantly improve my development skills. Have a innate love of beauty and aesthetics. Based on Moscow, Russia.
+				p.section__text I'm passionate about being involved in awesome projects with experienced people. I believe that it would make me feel like I'm doing something important.
+
+	/////////////////////
+	// Work Experience //
+	/////////////////////
+
+	section.section.section--experience#experience
+		.section__container
+			h2.subtitle
+				| Work 
+				br
+				| Experience
+			.table
+				.table__row
+					.table__cell.table__cell--dates
+						p.table__text September 2016 — October 2017
+					.table__cell
+						h3.table__subtitle RCGit
+						p.table__text Web Developer
+						p.table__text My tasks included support websites of the Company, developement of websites of various complexity, ranging from Landing Pages to online stores and working with the APIs, such as VK, Yandex Market, Google Maps etc. 
+				.table__row
+					.table__cell.table__cell--dates
+						p.table__text March 2016 — August 2016
+					.table__cell
+						h3.table__subtitle Leadman Brokers
+						p.table__text Web Developer
+						p.table__text I've got the experience of buildind Landing Pages, setting up CRM and dealt with Back-End Developement.
+				.table__row
+					.table__cell.table__cell--dates
+						p.table__text November 2015 — January 2016
+					.table__cell
+						h3.table__subtitle URdigital
+						p.table__text Front-End Developer (Intern)
+						p.table__text I helped to develop a website of an adverticement agency. I was responsible for UI development. It was great experience of evolving my skills and working in team.
+
+	//////////////
+	// Projects //
+	//////////////
+
+	section.section.section--projects#projects
+		.section__container
+			h2.subtitle Projects
+		.projects
+			.projects__block
+				a.card(href="http://90gradysov.ru/" target="_blank")
+					img.card__image(src="/images/projects/90gr.jpg", alt="")
+					.card__inner
+						h3.card__title 90 Градусов
+			.projects__block
+				a.card(href="http://pchurch.ru/" target="_blank")
+					img.card__image(src="/images/projects/pchurch.jpg", alt="")
+					.card__inner
+						h3.card__title Церковь «Возрождение»
+			.projects__block
+				a.card(href="http://mygrapholog.ru/" target="_blank")
+					img.card__image(src="/images/projects/mygrapholog.jpg", alt="")
+					.card__inner
+						h3.card__title Графолог Татьяна Червякова
+			.projects__block
+				a.card(href="http://www.mindolg.com/" target="_blank")
+					img.card__image(src="/images/projects/mindolg.jpg", alt="")
+					.card__inner
+						h3.card__title МинДолг
+			.projects__block
+				a.card(href="http://angryboys.pro/" target="_blank")
+					img.card__image(src="/images/projects/angryboys.jpg", alt="")
+					.card__inner
+						h3.card__title AngryBoys
+			.projects__block
+				.card.card--divided
+					.card__inner.card__inner--column
+						a.card__block(href="https://github.com/miniven/" target="_blank") 
+							i.fa.fa-github(aria-hidden="true")
+							span Look GitHub Profile
+						a.card__block(href="https://codepen.io/miniven/" target="_blank")
+							i.fa.fa-codepen(aria-hidden="true")
+							span Look Codepen Profile
+
+	//////////////
+	// Contacts //
+	//////////////
+
+	.section.section--contacts#contacts
+		.section__container
+			h2.subtitle Contacts
+			.section__row
+				.section__half
+					ul.contacts
+						li.contacts__item
+							p.contacts__subtitle Email
+							a.contacts__link(href="mailto:trepven@gmail.com") trepven@gmail.com
+						li.contacts__item
+							p.contacts__subtitle Phone
+							a.contacts__link(href="tel:+79067027225") +7 (906) 702 7225
+						li.contacts__item
+							p.contacts__subtitle Social
+							ul.social
+								li.social__item
+									a.social__link(href="https://vk.com/trepven" target="_blank")
+										i.fa.fa-vk(aria-hidden="true")
+								li.social__item
+									a.social__link(href="https://www.facebook.com/trepven" target="_blank")
+										i.fa.fa-facebook(aria-hidden="true")
+								li.social__item
+									a.social__link(href="https://www.instagram.com/trepven/" target="_blank")
+										i.fa.fa-instagram(aria-hidden="true")
+				.section__half
+					include _modules/form/form

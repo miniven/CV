@@ -1,0 +1,98 @@
+.section {
+	@include flex-row;
+
+	position: relative;
+	align-items: center;
+	min-height: 80vh;
+	padding: 45px 0;
+	font-size: 1rem;
+	background-color: $color-contast;
+	overflow: hidden;
+
+	@media (min-width: $media-md) {
+		padding: 90px 0;
+	}
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: rotate(90deg) translateX(5rem); // Поворачиваем и сдвигаем на начальную позицию //
+		transform-origin: right top;
+		font-size: 5rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: transparentize(#fff, 0.98);
+		z-index: 0;
+
+		@media (min-width: $media-md) {
+			transform: none;
+			font-size: 10rem;
+		}
+	}
+
+	&--dark {
+		background-color: darken($color-contast, 3%);
+	}
+
+	&--about:after {
+		content: 'About';
+	}
+
+	&--experience:after {
+		content: 'Experience';
+	}
+
+	&--projects {
+		display: block;
+		padding-bottom: 0;
+
+		&:after {
+			content: 'Projects';
+		}
+	}
+
+	&--contacts:after {
+		content: 'Contacts';
+	}
+
+	&__container {
+		@include container;
+
+		position: relative;
+    z-index: 1;
+	}
+
+	&__textzone {
+		width: columns(12);
+
+		@media (min-width: $media-md) {
+			width: columns(8);
+		}
+	}
+
+	&__text {
+		font-size: 1em;
+		line-height: 1.5em;
+
+		@media (min-width: $media-md) {
+			font-size: 1.125em;
+		}
+	}
+
+	&__row {
+		@include flex-row;
+
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+
+	&__half {
+		width: columns(12);
+		padding: 0 15px;
+
+		@media (min-width: $media-md) {
+			width: columns(6);
+		}
+	}
+}

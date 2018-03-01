@@ -1,0 +1,65 @@
+.header {
+	@include flex-row;
+	
+	position: relative;
+	align-items: center;
+	padding: 30px 0;
+	min-height: 100vh;
+	background-color: $color-main;
+	overflow: hidden;
+	
+	// Для плавного исчезания кругов //
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 25%;
+		background-image: linear-gradient(to bottom, $color-main 20%, transparentize($color-main, 1) 100%);
+		z-index: 1;
+	}
+
+	&:after {
+		content: 'Home';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: rotate(90deg) translateX(5rem); // Поворачиваем и сдвигаем на начальную позицию //
+		transform-origin: right top;
+		font-size: 5rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: transparentize(#fff, 0.9);
+
+		@media (min-width: $media-md) {
+			transform: none;
+			font-size: 10rem;
+		}
+	}
+
+	&__background {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0.3;
+		z-index: 0;
+		animation: FadeInParticles 5s;
+	}
+
+	&__content {
+		@include container;
+
+		position: relative;
+		z-index: 1;
+	}
+
+	&__textzone {
+		@include flex-column;
+
+		align-items: flex-start;
+		padding: 140px 0;
+	}
+}

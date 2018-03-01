@@ -1,0 +1,7 @@
+nav.navbar
+	.navbar__content
+		ul.navbar__list
+			- var navs = [{label: 'Home', link: '#header'}, {label: 'About Me', link: '#about'}, {label: 'Work Experience', link: '#experience'}, {label: 'Projects', link: '#projects'}, {label: 'Contacts', link: '#contacts'}];
+			each nav in navs
+				li.navbar__item
+					a.navbar__link(href="#{nav.link}" data-target="#{nav.link}")= nav.label

@@ -1,0 +1,74 @@
+.navbar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	font-size: 1rem;
+	background-color: $color-main;
+	z-index: 100;
+
+	&__content {
+		@include container;
+
+    overflow-x: scroll;
+		-webkit-overflow-scrolling: touch !important; 
+		-ms-overflow-style: -ms-autohiding-scrollbar !important;
+
+    @media (min-width: $media-md) {
+			overflow: visible;
+		}
+	}
+
+	&__list {
+		@include flex-row;
+
+		justify-content: flex-start;
+		margin: 0 -20px;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		padding: 20px;
+		font-size: 0.75em;
+		font-weight: 500;
+		text-decoration: none;
+		text-transform: uppercase;
+    white-space: nowrap;
+    color: $color-contast;
+    transition: 0.15s ease;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%) scaleX(0);
+			display: block;
+			height: 2px;
+			width: calc(100% - 40px);
+			background-color: #fff;
+			transition: 0.3s $transition-smooth;
+		}
+
+		&:hover,
+		&:focus {
+			color: #fff;
+
+			&:after {
+				transform: translateX(-50%) scaleX(1);
+			}
+		}
+
+		&--active {
+			color: #fff;
+			
+			&:after {
+				transform: translateX(-50%) scaleX(1);
+				background-color: #fff;
+			}
+		}
+	}
+}

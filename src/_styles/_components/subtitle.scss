@@ -1,0 +1,12 @@
+.subtitle {
+	margin: 0 0 45px;
+	font-size: 2rem;
+	font-weight: 900;
+	line-height: 0.95em;
+	text-transform: uppercase;
+	color: $color-main;
+
+	@media (min-width: $media-md) {
+		font-size: 4.2rem;
+	}
+}

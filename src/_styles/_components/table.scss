@@ -1,0 +1,49 @@
+.table {
+	color: #fff;
+	font-size: 1rem;
+
+	@media (min-width: $media-md) {
+		font-size: 1.125rem;
+	}
+
+	&__row {
+		@include flex-column;
+
+		margin: 45px -15px;
+
+		@media (min-width: $media-md) {
+			@include flex-row;
+
+			margin: 60px -15px;
+		}
+
+		&:last-child { // Обнулить нижний отступ у последнего //
+			margin: 45px -15px 0;
+
+			@media (min-width: $media-md) {
+				margin: 60px -15px 0;
+			}
+		}
+	}
+
+	&__cell {
+		padding: 0 15px;
+
+		&--dates {
+			min-width: columns(4);
+		}
+	}
+
+	&__text {
+		margin: 2px 0 15px;
+		font-size: 1em;
+		line-height: 1.5em;
+		color: transparentize(#fff, 0.45);
+	}
+
+	&__subtitle {
+		margin: 0 0 15px;
+		font-size: 1.35em;
+		font-weight: 700;
+	}
+}

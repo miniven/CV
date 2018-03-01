@@ -1,0 +1,28 @@
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/font-awesome/scss/font-awesome';
+
+// Base
+@import './fonts';
+@import './variables';
+@import './functions';
+@import './mixins';
+@import './base';
+@import './animations';
+
+// Components
+@import './_components/header';
+@import './_components/title';
+@import './_components/subtitle';
+@import './_components/button';
+@import './_components/section';
+@import './_components/table';
+@import './_components/projects';
+@import './_components/card';
+@import './_components/contacts';
+@import './_components/social';
+@import './_components/footer';
+
+// Import Modules
+@import '../_modules/navbar/navbar';
+@import '../_modules/form/form';
