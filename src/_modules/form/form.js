@@ -109,7 +109,10 @@ export default class Form {
 					};
 				},
 				(error) => {
-					console.error('Something went wrong.');
+					this._showMessage({
+            type: 'error',
+            text: 'Sorry. Your message can\'t be sent now.'
+          });
 				}
 			);
 	}
