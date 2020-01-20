@@ -38,7 +38,11 @@
 		margin: 2px 0 15px;
 		font-size: 1em;
 		line-height: 1.5em;
-		color: transparentize(#fff, 0.45);
+    color: transparentize(#fff, 0.45);
+
+    a {
+      color: $color-main;
+    }
 	}
 
 	&__subtitle {
